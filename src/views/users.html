@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <title>Document</title>
+</head>
+<body>
+  <main id="main">
+    <h1>Administracion de usuarios</h1>
+    <button class="btn btn--new" id="btnNew">Nuevo usuario</button>
+    <div class="content-form hide">
+      <form class="form" id="userForm">
+        <div class="content-wrapper">
+          <button class="btn btn--close btn--danger" formaction id="btnClose">X</button>
+          <input class="form__input" type="text" name="name" placeholder="nombre">
+          <input class="form__input" type="email" name="email" placeholder="correo">
+          <input class="form__input" style="display: none;" type="url" name="photo" placeholder="Foto de perfil">
+          <input class="form__input" type="date" name="age" placeholder="Fecha">
+          <input class="form__input" type="text" name="address" placeholder="Dirección">
+          <input class="form__input" type="text" name="job" placeholder="Profesion">
+          <input class="form__input" type="number" name="salary" placeholder="Salario">
+          <button class="btn btn--new" name="btn">Crear usuario</button>
+        </div>
+      </form>
+    </div>
+    <table class="table" id="users">
+    </table>
+  </main>
+  <script src="/js/users.js"></script>
+</body>
+</html>

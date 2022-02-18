@@ -26,7 +26,7 @@ const insert = async(tableName, data) =>{
 
 const update = async(tableName, data, id) =>{
   try {
-    await query(`UPDATE ${tableName} SET??=? WHERE id=? `,[Object.keys(data), Object.values(data), id])
+    await query(`UPDATE ${tableName} SET ? WHERE id=? `,[data, id])
     return {data,success:true}
   } catch (error) {
     return {error:error.sqlMessage, success:false}

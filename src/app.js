@@ -1,19 +1,18 @@
 const express = require('express')
 const path = require("path")
+const users = require('./router/users.routes')
 const app = express()
 
 
 //middleware
-app.use(express.static(path.join(__dirname,"views")))
 app.use(express.static(path.join(__dirname,"public")))
 app.use(express.json())
-
 //routes
-app.get('/', (req,res)=>{
-  res.sendFile('index.html')
-})
+app.use('/users',users().routerView);
+app.use('/api/users', users().router)
+
 
 //server
 app.listen(4000, ()=>{
-  console.log('app runing in port:' + 4000);
+  console.log(`App running in http://localhost:${4000}`);
 })
